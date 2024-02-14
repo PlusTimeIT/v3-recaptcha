@@ -1,0 +1,29 @@
+{
+  "name": "v3-recaptcha",
+  "version": "0.0.1",
+  "description": "Easily incorporate V3 recaptcha from google into your application",
+  "author": "PlusTimeIT <kane@plustime.com.au> (https://plustime.com.au/)",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/PlusTimeIT/v3-recaptcha.git"
+  },
+  "keywords": [
+    "vue3",
+    "google",
+    "google recaptcha",
+    "recaptcha V3"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PlusTimeIT/v3-recaptcha/issues"
+  },
+  "homepage": "https://github.com/PlusTimeIT/v3-recaptcha#readme",
+  "devDependencies" : {
+    "vue": "^3.4.19"
+  }
+}
