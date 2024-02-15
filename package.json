@@ -53,5 +53,12 @@
     ".": {
       "import": "./dist/index.js"
     }
+  },
+  "typesVersions": {
+    "*": {
+      "index": [
+        "dist/index.d.ts"
+      ]
+    }
   }
 }
