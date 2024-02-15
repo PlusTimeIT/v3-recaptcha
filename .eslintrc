@@ -7,7 +7,6 @@
   },
   "extends": [
     "plugin:vue/strongly-recommended",
-    "plugin:vuetify/base",
     "eslint:recommended",
     "plugin:import/typescript",
     "@vue/typescript/recommended",
@@ -40,29 +39,32 @@
     "no-debugger": "off",
     "vue/component-name-in-template-casing": ["error", "PascalCase"],
     "vue/prop-name-casing": ["error", "camelCase"],
-    "vue/order-in-components": ["error", {
-      "order": [
-        "el",
-        "name",
-        "key",
-        "parent",
-        "functional",
-        ["delimiters", "comments"],
-        ["components", "directives", "filters"],
-        "extends",
-        "mixins",
-        "inheritAttrs",
-        "model",
-        ["props", "propsData"],
-        "data",
-        "computed",
-        "watch",
-        "LIFECYCLE_HOOKS",
-        "methods",
-        ["template", "render"],
-        "renderError"
-      ]
-    }]
+    "vue/order-in-components": [
+      "error",
+      {
+        "order": [
+          "el",
+          "name",
+          "key",
+          "parent",
+          "functional",
+          ["delimiters", "comments"],
+          ["components", "directives", "filters"],
+          "extends",
+          "mixins",
+          "inheritAttrs",
+          "model",
+          ["props", "propsData"],
+          "data",
+          "computed",
+          "watch",
+          "LIFECYCLE_HOOKS",
+          "methods",
+          ["template", "render"],
+          "renderError"
+        ]
+      }
+    ]
   },
   "ignorePatterns": ["**/node_modules/**", "**/docs/**", "**/dist/**"]
 }

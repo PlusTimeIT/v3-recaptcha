@@ -1,20 +1,15 @@
 import { ref, computed } from "vue";
 
-export const useV3Recaptcha = (site_key: string | null) =>
-{
+export const useV3Recaptcha = (site_key: string | null) => {
   const global = window as any;
   const recaptchaIsLoaded = ref<boolean>(false);
-  const hasRecaptcha = computed<boolean>(() => site_key !== undefined && site_key !== null && site_key !== '');
-  const loadRecaptcha = (): void =>
-  {
-    if (hasRecaptcha.value && global && !global.grecaptcha)
-    {
+  const hasRecaptcha = computed<boolean>(() => site_key !== undefined && site_key !== null && site_key !== "");
+  const loadRecaptcha = (): void => {
+    if (hasRecaptcha.value && global && !global.grecaptcha) {
       const recaptchaScript = document.createElement("script");
       document.head.appendChild(recaptchaScript);
-      recaptchaScript.onload = () =>
-      {
-        global.grecaptcha.ready(() =>
-        {
+      recaptchaScript.onload = () => {
+        global.grecaptcha.ready(() => {
           recaptchaIsLoaded.value = true;
         });
       };
@@ -22,17 +17,15 @@ export const useV3Recaptcha = (site_key: string | null) =>
     }
   };
 
-  const getToken = async (action: string): Promise<string | undefined> =>
-  {
+  const getToken = async (action: string): Promise<string | undefined> => {
     if (!hasRecaptcha.value || !global.grecaptcha) return Promise.resolve(undefined);
-    return new Promise((resolve) =>
-    {
-      global.grecaptcha.ready(() =>
-        void (async () =>
-        {
-          const token = await global.grecaptcha.execute(site_key, { action: action });
-          resolve(token);
-        })(),
+    return new Promise((resolve) => {
+      global.grecaptcha.ready(
+        () =>
+          void (async () => {
+            const token = await global.grecaptcha.execute(site_key, { action: action });
+            resolve(token);
+          })(),
       );
     });
   };
@@ -41,6 +34,6 @@ export const useV3Recaptcha = (site_key: string | null) =>
     loadRecaptcha,
     getToken,
     recaptchaIsLoaded,
-    hasRecaptcha
+    hasRecaptcha,
   };
 };
