@@ -40,6 +40,14 @@ const { recaptchaIsLoaded, hasRecaptcha, loadRecaptcha, getToken } = useV3Recapt
 
 `"YOUR SITE KEY HERE"` should be replaced with your site key from google. If you are adding this into a package and allowing users choose if they want to include recaptcha, this can be replaced with `null` and recaptcha wont load, getToken will then return `undefined` instead of a token string.
 
+Load recaptcha is typically best to add this on the `onMounted` hook:
+
+```js
+onMounted(() => {
+  loadRecaptcha();
+});
+```
+
 Get a token:
 
 ```js
