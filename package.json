@@ -11,7 +11,7 @@
     "format": "prettier --write src/",
     "build": "./.scripts/build.sh --non-interactive",
     "build:vite": "rimraf dist && vite build",
-    "build:types": "vue-tsc"
+    "build:types": "vue-tsc --project tsconfig.build-types.json --declaration"
   },
   "repository": {
     "type": "git",
