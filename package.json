@@ -1,6 +1,6 @@
 {
   "name": "v3-recaptcha",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Easily incorporate V3 recaptcha from google into your application",
   "author": "PlusTimeIT <kane@plustime.com.au> (https://plustime.com.au/)",
   "type": "module",
