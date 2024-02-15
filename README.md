@@ -14,6 +14,8 @@ This package is used to incorporate Googles V3 Recaptcha into a vue project easi
 
 - Injecting script into head to load googles recaptcha.
 - Generating a token to be verified on your server.
+- Pass actions to recaptcha token generator
+- Handle recaptcha loading dynamically if required.
 
 ## Installation
 

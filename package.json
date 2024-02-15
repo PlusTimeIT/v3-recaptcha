@@ -4,7 +4,8 @@
   "description": "Easily incorporate V3 recaptcha from google into your application",
   "author": "PlusTimeIT <kane@plustime.com.au> (https://plustime.com.au/)",
   "type": "module",
-  "main": "build/index.js",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
@@ -52,13 +53,6 @@
   "exports": {
     ".": {
       "import": "./dist/index.js"
-    }
-  },
-  "typesVersions": {
-    "*": {
-      "index": [
-        "./dist/index.d.ts"
-      ]
     }
   }
 }
