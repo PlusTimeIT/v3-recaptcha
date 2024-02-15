@@ -40,9 +40,17 @@ const { recaptchaIsLoaded, hasRecaptcha, loadRecaptcha, getToken } = useV3Recapt
 
 `"YOUR SITE KEY HERE"` should be replaced with your site key from google. If you are adding this into a package and allowing users choose if they want to include recaptcha, this can be replaced with `null` and recaptcha wont load, getToken will then return `undefined` instead of a token string.
 
-| Variables         | Description                                                                                     |
-| :---------------- | :---------------------------------------------------------------------------------------------- |
-| recaptchaIsLoaded | ref variable that returns whether the captcha script has loaded.                                |
-| hasRecaptcha      | ref variable that returns whether the site key has been loaded                                  |
-| loadRecaptcha     | function to load the recaptcha script, will be skipped if site key is `null `                   |
-| getToken          | async function returns either a string if site key is set, or `undefined` if site key is `null` |
+Get a token:
+
+```js
+const token = await getToken(`process_form`);
+```
+
+## Functions and Variables
+
+| Variables         |       Type        | Description                                                                             |
+| :---------------- | :---------------: | :-------------------------------------------------------------------------------------- |
+| recaptchaIsLoaded |   ref<boolean>    | Returns whether the recaptcha script has loaded.                                        |
+| hasRecaptcha      | computed<boolean> | Returns whether the site key has been loaded                                            |
+| loadRecaptcha     |     function      | Loads the recaptcha script, will be skipped if site key is `null ` OR is already loaded |
+| getToken          |  async function   | Returns either a string if site key is set, or `undefined` if site key is `null`        |
