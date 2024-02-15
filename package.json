@@ -48,10 +48,10 @@
     "vite": "^5.1.2"
   },
   "dependencies": {},
-  "module": "./dist/v3-recaptcha.js",
+  "module": "./dist/index.js",
   "exports": {
     ".": {
-      "import": "./dist/v3-recaptcha.js"
+      "import": "./dist/index.js"
     }
   }
 }
