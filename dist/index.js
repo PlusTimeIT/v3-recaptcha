@@ -1,6 +1,8 @@
-import { ref as p, computed as d } from "vue";
+import { ref as p, computed as l } from "vue";
 const u = (a) => {
-  const e = window, o = p(!1), t = d(() => a != null && a !== "");
+  const e = window;
+  console.log("global", e);
+  const o = p(!1), t = l(() => a != null && a !== "");
   return {
     loadRecaptcha: () => {
       if (t.value && e && !e.grecaptcha) {
