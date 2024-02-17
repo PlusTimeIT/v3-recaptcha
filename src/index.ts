@@ -15,6 +15,8 @@ export const useV3Recaptcha = (site_key: string | null) => {
         });
       };
       recaptchaScript.setAttribute("src", `https://www.google.com/recaptcha/api.js?render=${site_key}`);
+    } else if (global.grecaptcha) {
+      recaptchaIsLoaded.value = true;
     }
   };
 
