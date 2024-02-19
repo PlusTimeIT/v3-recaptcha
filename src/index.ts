@@ -2,7 +2,6 @@ import { ref, computed } from "vue";
 
 export const useV3Recaptcha = (site_key: string | null) => {
   const global = window as any;
-  console.log("global", global);
   const recaptchaIsLoaded = ref<boolean>(false);
   const hasRecaptcha = computed<boolean>(() => site_key !== undefined && site_key !== null && site_key !== "");
   const loadRecaptcha = (): void => {
